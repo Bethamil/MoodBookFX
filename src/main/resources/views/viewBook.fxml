@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox alignment="CENTER" spacing="20.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="emiel.controller.ViewBookController">
+   <padding>
+      <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+   </padding>
+   <children>
+      <Label text="My Book">
+         <font>
+            <Font size="31.0" />
+         </font>
+      </Label>
+      <HBox prefHeight="10.0" prefWidth="320.0">
+         <children>
+            <DatePicker fx:id="datePickerThing" onAction="#pickedDate" />
+            <Separator orientation="VERTICAL" prefHeight="38.0" prefWidth="30.0" />
+            <ChoiceBox fx:id="selectedMood" prefWidth="150.0" />
+            <Separator minWidth="5.0" orientation="VERTICAL" prefWidth="5.0" visible="false" />
+            <Separator orientation="VERTICAL" prefHeight="38.0" prefWidth="30.0" />
+            <Button minWidth="100.0" mnemonicParsing="false" onAction="#showAllModes" text="Show all moods" />
+         </children>
+      </HBox>
+      <ListView fx:id="listViewMoods" prefHeight="320.0" prefWidth="320.0" />
+      <Label fx:id="extraInfoLabel" alignment="CENTER" textAlignment="CENTER" wrapText="true" />
+      <Button fx:id="deleteForRealButton" mnemonicParsing="false" onAction="#deleteThis" text="Are you sure?" visible="false" />
+      <HBox alignment="CENTER" prefHeight="38.0" prefWidth="200.0">
+         <children>
+            <Button fx:id="deleteButton" mnemonicParsing="false" onAction="#wantToDelete" text="Delete" />
+            <Separator orientation="VERTICAL" prefHeight="38.0" prefWidth="30.0" />
+            <Button mnemonicParsing="false" onAction="#menuButton" text="Menu" />
+         </children>
+      </HBox>
+   </children>
+</VBox>
